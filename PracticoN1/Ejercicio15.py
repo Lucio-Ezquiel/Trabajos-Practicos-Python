@@ -3,41 +3,35 @@ suma = 0
 cinc = 0
 nueve = 0
 diez = 0
+sumaCaracteres = 0
 
+#Pedimos el numero al usuario (automaticamente esta en string), luego sacamos la longitud de esa cadena de texto utilizando len(num)
 num = input("Ingrese un numero entero")
-if len(num) == 2 :
-    suma = int(num[0]) + int(num[1])
-elif len(num) == 1:
-    suma = int(num)
-elif len(num) == 3:
-    suma = int(num[0]) + int(num[1]) + int(num[2])
+long = len(num)
 
-if len(num) == 2 :
-    cinc = int(num[1])
-elif len(num) == 3 :
-    cinc = int(num[2])
+caracteres = list(num)
+print(caracteres)
 
-if len(num) == 2:
-   nueve = int(num[0]) + int(num[1])
-elif len(num) == 3:
-    nueve = int(num[0]) + int(num[1]) + int(num[2])
-elif len(num) == 1:
-    nueve = int(num)
+for caracter in caracteres : 
+    sumaCaracteres = sumaCaracteres + int(caracter)
+    ultimoCaracter = int(caracter)
 
-if len(num) == 2:
-    diez = int(num[1])
-elif len(num) == 3:
-    diez = int(num[2])
-    
+print(sumaCaracteres)
+print(ultimoCaracter)
+
 if int(num) % 2 == 0:
     print("El numero es divisible por 2")
-if suma % 3 == 0:
+if sumaCaracteres % 3 == 0:
     print("El numero es divisible por 3")
-if cinc == 0 or cinc == 5 or int(num) == 0 or int(num) == 5:
+if ultimoCaracter == 5 or ultimoCaracter == 0:
     print("El numero es divisible por 5")
-if int(num) % 2 == 0 and suma % 3 == 0:
+if int(num) % 2 == 0 and sumaCaracteres % 3 == 0:
     print("El numero es divisible por 6")
-if nueve % 9 == 0:
+if sumaCaracteres % 9 == 0:
     print("El numero es divisible por 9")
-if diez == 0:
+if ultimoCaracter == 0:
     print("El numero es divisible por 10")
+
+
+
+
