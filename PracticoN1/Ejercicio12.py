@@ -1,24 +1,17 @@
-def esDiaLaboral(dia):
-    diasSemanas={
-        1:"Lunes",
-        2:"Martes",
-        3:"Miercoles",
-        4:"Jueves",
-        5:"Viernes",
-        6:"Sabado",
-        7:"Domingo"
-    }
-    if dia in diasSemanas:
-        if 1<= dia <=5:
-            print(diasSemanas(dia), "es un dia laboral")
-        else:
-            print(diasSemanas(dia),"No es un dia laboral")
+def es_dia_laboral():
+    while True:
+        try:
+            dia_semana = int(input("Ingrese un número del 1 al 7 para representar un día de la semana: "))
+            if 1 <= dia_semana <= 7:
+                break
+            else:
+                print("Número inválido. Ingrese un número entre 1 y 7.")
+        except ValueError:
+            print("Por favor, ingrese un número entero.")
+
+    if 1 <= dia_semana <= 5:
+        print("Es un día laboral.")
     else:
-        print("El dia ingresado no es valido, ingrese un numero del 1 al 7")
-while True:
-    try:
-        dia=int(input("Ingrese un número del 1 al 7 para el día de la semana: "))
-        esDiaLaboral(dia)
-        break
-    except ValueError:
-        print("Ingrese un numero valido")
+        print("Es un día no laboral.")
+
+es_dia_laboral()
