@@ -4,9 +4,4 @@ precioInicial = float(precioInicial)
 precioFinal = precioInicial * 1.21
 print(precioFinal)
 
-print("ingrese un numero mayor a 0: ")
-num = input()
 
-while (num <= 0):
-    print("ingrese un numero mayor a 0: ")
-    num = input()
