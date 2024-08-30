@@ -1,0 +1,7 @@
+"""
+ Si se asigna un valor a una variable fuera de rango (mayor de lo establecido) ¿Qué 
+ocurre? ¿Existe alguna forma de resolverlo? Ejemplifique. 
+"""
+Si se asigna un valor a una variable fuera de rango ocurre un error.
+Por ejemplo: Si tenemos un programa que calcula las promedio de las notas de los alumnos y yo ingreso un valor negativo, se produce un error por valor fuera de rango. Para que no suceda
+agregaría validar la entrada del usuario y que solo ingrese una nota válida.
