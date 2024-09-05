@@ -1,0 +1,4 @@
+14- Indique si en Python existen o no variables de tipo valor y su contraparte tipo
+referencia como sucede en otros lenguajes como Java.
+
+en Python todas las variables son referencias a objetos, y no hay una distinción explícita entre variables de tipo valor y tipo referencia como en Java.

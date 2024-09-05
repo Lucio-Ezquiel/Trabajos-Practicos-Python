@@ -1,0 +1,5 @@
+2- Si se asigna un valor a una variable fuera de rango (mayor de lo establecido) ¿Qué
+ocurre? ¿Existe alguna forma de resolverlo? Ejemplifique.
+
+El valor maximo de un integer en python3 depende de la memoria del systema. Ahora si hay un limite 4300 charecteres para la conversion de string a int.
+
