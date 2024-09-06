@@ -1,5 +1,5 @@
 import random
-
+""
 numIngresado = 0
 contador = 1
 numAleatorio = random.randint(1, 100)
