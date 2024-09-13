@@ -1,9 +1,10 @@
 """
-17- Cree una clase FuncionesPrograma y codifique una función estática getFechaString
-que reciba como parámetro una fecha y retorne la fecha como una cadena literal.
-Ejemplo recibo 15/10/1900, la salida debe ser
-Quince de Octubre de mil novecientos.
+18- En la clase FuncionesPrograma codifique una método getFechaDate estática que
+reciba como parámetro 3 valores enteros, día, mes, anio y retorne la fecha de tipo
+date correspondiente.
 """
+import datetime
+
 class FuncionesPrograma:
     @staticmethod
     def getFechaString(fecha):
@@ -62,11 +63,16 @@ class FuncionesPrograma:
 
         return (f"{dayi.capitalize()} de {monthi} de{yeari[0]} mil{yeari[1]}{yeari[2]}")
 
+    @staticmethod
+    def getFechaDate(dia, mes, anio):
+        return datetime.date(anio, mes, dia) 
+
 
 class Principal:
     def main():
         print(FuncionesPrograma.getFechaString("15/10/1900"))
         print(FuncionesPrograma.getFechaString("15/10/2024"))
         print(FuncionesPrograma.getFechaString("17/10/3335"))
+        print(f"De getFechaDate(): {FuncionesPrograma.getFechaDate(15, 10, 2024)} {type(FuncionesPrograma.getFechaDate(15, 10, 2024))}")
 
 Principal.main()
