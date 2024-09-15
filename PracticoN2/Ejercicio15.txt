@@ -1,0 +1,14 @@
+"""
+Indique que sucede si realizo la siguiente declaración de variable:  
+x = None print(x)  
+Explique y ejemplifique el uso de None
+"""
+Cuando declaras x = None en Python, estás asignando el valor especial None a la variable x. Esto indica explícitamente que la variable x no tiene ningún valor asignado en este momento.
+Se usa para inicializar variables antes de asignarles un valor real.
+Por ejemplo:
+mensaje = None
+
+if mensaje is None:
+    print("No hay mensaje para mostrar.")
+else:
+    print("El mensaje es:", mensaje)
