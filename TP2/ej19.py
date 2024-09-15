@@ -17,24 +17,44 @@ ejecute la función aplicarOperacion, pasando como parámetro primero “+”, d
 operaciones.
 """
 
-class OperacionMatematica:
-    def __init__(self, valor1, valor2, operacion):
+class OperacionMatematica():
+    def __init__(self, valor1, valor2, operacion='+'):
         self.valor1 = valor1
         self.valor2 = valor2
+        self.operacion = operacion
 
-    def sumarNumeros():
+    def sumarNumeros(self):
         return self.valor1 + self.valor2
 
-    def restarNumeros():
+    def restarNumeros(self):
         return self.valor1 - self.valor2
 
-    def multiplicarNumeros():
+    def multiplicarNumeros(self):
         return self.valor1 * self.valor2
 
-    def dividirNumeros():
+    def dividirNumeros(self):
         return self.valor1 / self.valor2
 
-    def aplicarOperacion(operacion):
+    def aplicarOperacion(self, operacion):
         match operacion:
             case "+":
-                sumarNumeros()
+                return self.sumarNumeros()
+            case "-":
+                return self.restarNumeros()
+            case "*":
+                return self.multiplicarNumeros()
+            case "/":
+                return self.dividirNumeros()
+
+class Calculo():
+    def main(self):
+        op = OperacionMatematica(8,4)
+        add = op.aplicarOperacion('+')
+        sub = op.aplicarOperacion('-')
+        mult = op.aplicarOperacion('*')
+        div = op.aplicarOperacion('/')
+
+        print(f"sumar: {add}, restar: {sub}, multiplicar: {mult}, division: {div}")
+
+i = Calculo()
+i.main()
