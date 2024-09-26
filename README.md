@@ -7,4 +7,6 @@
 
 [x] TP1
 
-[] TP2 - hasta 17 -
+[x] TP2 
+
+[x] TP3 
