@@ -5,18 +5,9 @@ convertir la variable a los siguientes tipos de datos, short, int, long, float i
 diferentes formas de lograr la conversión. Muestre por pantalla el resultado de las
 conversiones.
 """
-valorDecimal = float(input("Ingrese un número decimal: "))
+valorDecimal = input("Ingrese un valor decimal: ")
 
-short = int(valorDecimal)
-
-int = int(valorDecimal)
-
-long = int(valorDecimal)
-
-float = valorDecimal
-
-print("Valor original:", valorDecimal)
-print("Como short (int):", short)
-print("Como int:", int)
-print("Como long (int):", long)
-print("Como float:", float)
+print(f'Casting a short: {int(valorDecimal)}')
+print(f'Casting a long: {int(valorDecimal)}')
+print(f'Casting a int: {int(valorDecimal)}')
+print(f'Casting a float: {float(valorDecimal)}')
