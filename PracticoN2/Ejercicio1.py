@@ -5,7 +5,7 @@ convertir la variable a los siguientes tipos de datos, short, int, long, float i
 diferentes formas de lograr la conversión. Muestre por pantalla el resultado de las
 conversiones.
 """
-valorDecimal = input("Ingrese un valor decimal: ")
+valorDecimal = float(input("Ingrese un valor decimal: "))
 
 print(f'Casting a short: {int(valorDecimal)}')
 print(f'Casting a long: {int(valorDecimal)}')
