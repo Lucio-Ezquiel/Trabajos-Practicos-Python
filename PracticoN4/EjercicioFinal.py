@@ -20,6 +20,12 @@ def eliminarProducto (produc, cod):
    produc.pop(cod)
    print("El producto con código", cod, "ha sido eliminado del inventario")
 
+def productoPrecio (produc, min, max):
+    print("Productos en el rangode precio entre $5000 y $20000")
+    for codigo, (nombre, precio) in produc.items():
+        if min <= precio <= max:
+            print(f"Código: {codigo}, Descripción: {nombre}, Precio: ${precio}")
+    
 productos = {
     "A001": ("Pantalon", 15000),
     "A002": ("Remera", 20000),
@@ -35,3 +41,5 @@ print("")
 modificarPrecio(productos, "A004", 60000)
 print("")
 eliminarProducto(productos, "A002")
+print("")
+productoPrecio(productos, 5000, 20000)
