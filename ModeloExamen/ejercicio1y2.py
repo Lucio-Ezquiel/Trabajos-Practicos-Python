@@ -61,3 +61,53 @@ Generar una nueva Lista de N filas por 1 columna que contenga en cada celda de
 la columna la sumatoria de las celdas de cada una de las filas de la Lista cargada
 en el punto 1.
 """
+matriz2 = []
+for fila in matriz:
+    numero=0
+    for i in fila:
+        numero += i
+    matriz2.append(numero)
+
+print("La matriz sumatorio de filas es:")
+for filas in matriz2:
+    print(filas)
+
+"""
+Generar una nueva Lista de tamaño N filas por 2 columnas donde la primer
+columna contenga los valores calculados en el punto 3 pero ordenados de
+Mayor a Menor, y en la segunda columna asignar el valor de la fila que poseía
+originalmente en la Lista del punto 3.
+"""
+
+sumas_con_indices = []
+for i, fila in enumerate(matriz):
+    suma = 0
+    for elemento in fila:
+        suma += elemento
+    sumas_con_indices.append((suma, i))
+
+n = len(sumas_con_indices)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if sumas_con_indices[j][0] < sumas_con_indices[j+1][0]:
+            sumas_con_indices[j], sumas_con_indices[j+1] = sumas_con_indices[j+1], sumas_con_indices[j]
+
+matriz3 = []
+for suma, indice in sumas_con_indices:
+    matriz3.append([suma, indice + 1]) 
+
+print("La matriz ordenada por suma de filas y su índice original es:")
+for fila in matriz3:
+    print(fila)
+
+"""
+Finalmente sume los elementos de la columna 1 de la Lista del punto 5 y
+muestre el resultado de la sumatoria por pantalla.
+"""
+columnaFinal = 0
+sumar = 0
+
+for fila in matriz3:
+    sumar += fila[columnaFinal]
+
+print("La suma de la columna es: ", sumar)
