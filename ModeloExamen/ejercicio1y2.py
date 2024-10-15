@@ -55,3 +55,9 @@ while True:
 print("La matriz cargada es:")
 for fila in matriz:
     print(fila)
+
+"""
+Generar una nueva Lista de N filas por 1 columna que contenga en cada celda de
+la columna la sumatoria de las celdas de cada una de las filas de la Lista cargada
+en el punto 1.
+"""
