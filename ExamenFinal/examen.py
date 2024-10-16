@@ -62,33 +62,31 @@ for fila in matriz2:
 #columna contenga los valores calculados en el punto 3 pero ordenados de
 #Mayor a Menor, y en la segunda columna asignar el valor de la fila que poseía
 #originalmente en la Lista del punto 3.
-sumasI= []
-for i, fila in enumerate(matriz):
-    suma = 0
-    for elemento in fila:
-        suma += elemento
-    sumasI.append((suma, i))
+matriz_tres = []
+tamaño = len(matriz2)
 
-n = len(sumasI)
-for i in range(n):
-    for j in range(0, n-i-1):
-        if sumasI[j][0] < sumasI[j+1][0]:
-            sumasI[j], sumasI[j+1] = sumasI[j+1], sumasI[j]
-
-matriz3 = []
-for suma, indice in sumasI:
-    matriz3.append([suma, indice + 1]) 
-
+while tamaño > 0:
+    mayor = 0
+    posicion = 0
+    for i, fila in enumerate(matriz2):
+        if fila > mayor:
+            mayor = fila
+            posicion = i
+    matriz_tres.append([mayor, posicion])
+    matriz2[posicion] = -1
+    tamaño -=1
+    
 #Mostrar la Lista resultante por pantalla.
-for fila in matriz3:
+
+for fila in matriz_tres:
     print(fila)
 
 #Finalmente sume los elementos de la columna 1 de la Lista del punto 5 y
 #muestre el resultado de la sumatoria por pantalla.
-sumaE=0
-columnaP=0
 
-for fila in matriz3:
-    sumaE += fila[columnaP]
+suma_elementos = 0
 
-print("La suma final de la primer columna es:",sumaE)
+for fila in matriz_tres:
+   suma_elementos += fila[0]
+
+print(suma_elementos)
