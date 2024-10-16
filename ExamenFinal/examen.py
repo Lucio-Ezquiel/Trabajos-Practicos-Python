@@ -74,7 +74,9 @@ while tamaño > 0:
             posicion = i
     #A la matriz numero 3 le mando como primera fila la fila mayor y la posicion en la que esta
     matriz_tres.append([mayor, posicion])
+    #Indicamos que en la matriz2 y en la posicion que se encuentra, estos no se van a tomar en cuenta para el proximo bucle
     matriz2[posicion] = -1
+    #Le restamos tamaño a la matriz para que cuando se terminen de ordenar todos los valores el bucle while termine
     tamaño -=1
     
 #Mostrar la Lista resultante por pantalla.
