@@ -72,6 +72,7 @@ while tamaño > 0:
         if fila > mayor:
             mayor = fila
             posicion = i
+    #A la matriz numero 3 le mando como primera fila la fila mayor y la posicion en la que esta
     matriz_tres.append([mayor, posicion])
     matriz2[posicion] = -1
     tamaño -=1
